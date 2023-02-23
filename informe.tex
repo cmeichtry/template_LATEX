@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\input{preambulo/preamble}
+\input{preambulo/definiciones}
+\setlength{\parindent}{12pt} %sangria
+\linespread{1} % Interlineado
+
+%---------------- ENCABEZADO Y PIE DE PAGINA ----------------%
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\begin{picture}(0,0) \put(-51,-7){\includegraphics[width=20mm]{imagenes/logoITBA.png}} \end{picture}}
+\lhead{\materia}
+\lfoot{\leftmark}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%---------------- INICIO DEL DOCUMENTO ----------------%
+\begin{document}
+%---------------- CARATULA ----------------%
+\input{caratulas/caratula1}
+\newpage
+%---------------- INDICE ----------------%
+\newpage
+\pagestyle{empty}
+\renewcommand{\contentsname}{{\textit{\huge Índice}}} %Se puede poner lo que sea en vez de índice
+\tableofcontents
+
+\newpage
+\pagestyle{empty}
+\renewcommand{\listfigurename}{{\textit{\huge Lista de figuras}}}
+\listoffigures
+
+%---------------- DESARROLLO ----------------%
+\newpage
+\pagestyle{fancy} %activa encabezado y pie de pagina
+\setcounter{page}{1} %empezar numeración desde está pagina
+\seteocontadores
+\section{Sección 1}
+\input{secciones/seccion1}
+
+\newpage
+\seteocontadores
+\section{Sección 2}
+\input{secciones/seccion2}
+
+\newpage
+\seteocontadores
+\section{Sección 3}
+\input{secciones/seccion3}
+
+\newpage
+\seteocontadores
+\section{Sección 4}
+\input{secciones/seccion4}
+
+\newpage
+\seteocontadores
+\section{Sección 5}
+\input{secciones/seccion5}
+
+\newpage
+\seteocontadores
+\section{Sección 6}
+\input{secciones/seccion6}
+
+%%%%%%% APENDICES %%%%%%%%
+
+\appendix %define el formato apendice
+\clearpage
+\newpage
+\pagenumbering{Roman} %cambia numeracion
+\def \nombreapendice{A} %letra del apendice para tablas y figuras
+\formatoapendice %define el formato para numeracion de cosas
+\seteocontadores %inicializa los contadores
+\section{Nombre Apéndice A}\label{ApendiceA} %nombre del apendice, mas label para referenciarlo (se puede con \autoref{})
+\input{secciones/apendiceA}
+
+\clearpage
+\newpage
+\pagenumbering{Roman}
+\def \nombreapendice{B}
+\formatoapendice
+\seteocontadores
+\section{Nombre Apéndice B}\label{Apendice B}
+\input{secciones/apendiceB}
+
+%---------------- BIBLIOGRAFIA ----------------%
+\clearpage
+\newpage
+\input{secciones/bibliografia.bib} %agrega la bibliografía
+\addcontentsline{toc}{section}{Bibliografía} %agrega la sección bibliografía en el indice
+%---------------- FIN DEL DOCUMENTO ----------------%
+\end{document} 
