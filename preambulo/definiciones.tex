@@ -1,0 +1,60 @@
+\def \universidad{Instituto Tecnológico de Buenos Aires}
+\def \unidad{NUMERO DE TP}
+\def \carrera{Departamento de Ingeniería Electrónica}
+\def \materia{MATERIA}
+\def \titulo{TITULO}
+
+\def \grupo{NUMERO DE GRUPO}
+
+\def \autores{
+\noindent
+    \textbf{GRUPO N° \grupo}\\
+    Integrante 1\\
+    Integrante 2\\
+    Integrante 3\\
+    Integrante 4\\
+    Integrante 5\\
+}
+\def \profesores{
+    Ing. Profesor 1\\
+    Ing. Profesor 2\\
+}
+
+\def \Colaboradores{ %nombres de los ayudantes
+    
+}
+
+\def \fecha{
+    \noindent
+    Fecha de entrega: \today
+    
+    \noindent
+    Fecha de corrección:
+}
+
+\def \seteocontadores{
+\setcounter{equation}{0} %empezar numeración desde 1 para ecuaciones
+\setcounter{figure}{0} %empezar numeración desde 1 para figuras
+\setcounter{table}{0} %empezar numeración desde 1 para tablas
+}
+
+\def \formatoapendice{
+\renewcommand{\thetable}{\nombreapendice{}.\arabic{table}}
+\renewcommand{\thefigure}{\nombreapendice{}.\arabic{figure}}
+\rfoot{\nombreapendice{}.\thepage}
+}
+
+%--------------------Funciones para usar en mathmode--------------------%
+\newcommand{\derpar}[2]{\frac{\partial #1}{\partial #2}} %derivada parcial
+\newcommand{\der}[2]{\frac{d #1}{d #2}} %derivada "normal"
+\newcommand{\paren}[1]{\left( #1 \right)} %Parentesis
+\newcommand{\corch}[1]{\left[ #1 \right]} %corchetes
+\newcommand{\llave}[1]{\left \{ #1 \right \}} %llaves
+\newcommand{\supind}[2]{#1^{#2}} %supraindice
+\newcommand{\subind}[2]{#1_{#2}} %supraindice
+\newcommand{\ohm}{\Omega} %Escribe el simbolo Ω
+
+%--------------------Funciones para formato de texto--------------------%
+\newcommand{\cursiva}[1]{\textit{#1}}
+\newcommand{\negrita}[1]{\textbf{#1}}
+\newcommand{\subrayar}[1]{\underline{#1}}
