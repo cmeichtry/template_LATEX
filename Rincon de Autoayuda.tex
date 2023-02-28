@@ -41,38 +41,73 @@
 %\end{equation}
 
 %ECUACIONES DE REFERENCIA
+%https://manualdelatex.com/simbolos
+\centering{\subrayar{Producto}}
 \begin{equation*}
 	a\cdot b
 \end{equation*}
 
+\centering{\subrayar{División}}
 \begin{equation*}
 	\frac{a}{b}
 \end{equation*}
 
-\begin{equation*}
-	\int_a^b f(x)\, dx. 
-\end{equation*}
+\centering{\subrayar{Integral}}
+\begin{align*}
+	&\int f(x)\,dx\\
+        &\iint f(x,y)\,dx\,dy\\
+        &\iiint f(x,y,z)\,dx\,dy\,dz\\
+        &\int\limits_{a}^{b}f(x)\,dx\\
+        &\int_{a}^{b}f(x)\,dx\\
+        &\int_{a}^{b}\int_{c}^{d}f(x,y)\,dx\,dy
+\end{align*}
 
+\centering{\subrayar{Sumatoria}}
 \begin{equation*}
 	\sum_{i=1}^n f(x_i) \Delta x
 \end{equation*}
 
+\centering{\subrayar{Productoria}}
 \begin{equation*}
-	\lim_{\Delta \to 0} \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}
+	\prod_{i=1}^n f(x_i) \Delta x
 \end{equation*}
 
+\centering{\subrayar{Límites}}
+\begin{align*}
+	&\lim_{x \to 0} \frac{1}{x} = \,\infty \\ 
+        &\frac{1}{x}\stackrel[] {x \to 0}{\longrightarrow}\,\infty
+\end{align*}
+
+\centering{\subrayar{Módulo}}
 \begin{equation*}
 	\lvert -5 \rvert=5
 \end{equation*}
 
-\begin{equation*}
-	\sqrt{x+1}
-\end{equation*}
+\centering{\subrayar{Raíces}}
+\begin{align*}
+	&\sqrt{x+1}\\
+        &\sqrt[3]{x+1}\\
+        &\sqrt[4]{x+1}
+\end{align*}
 
-\begin{equation*}
-	\vec{a} =\begin{pmatrix} 1\\2\\3 \end{pmatrix} \text{, } \widehat{\vec{a}} \text{ o } \overrightarrow{AB}
-\end{equation*}
+\centering{\subrayar{Matrices y vectores}}
+\begin{align*}\centering
+        &    A_{m,n} = 
+            \begin{pmatrix}
+                a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+                a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+                \vdots  & \vdots  & \ddots & \vdots  \\
+                a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+            \end{pmatrix}\\
+        &\vec{a} =
+            \begin{pmatrix} 
+                1\\2\\3 
+            \end{pmatrix}\\
+        &\widehat{\vec{a}}\\
+        &\overrightarrow{AB}
+\end{align*}
 
+\centering{\subrayar{Sistemas}}
 \begin{equation*}
 	f(x) = \begin{cases}
 	x^2 & \text{si } x>2,\\
@@ -80,20 +115,72 @@
 	\end{cases}
 \end{equation*}
 
+\centering{\subrayar{Simbolos}}
 \begin{equation*}
-	\left(\frac{a}{b} \right)
+\pm \, \infty \, \leq \, \geq \, \circ \, \in \, \notin \, \subset \, \subseteq \, \cap \, \cup \, A^\complement \, \exists \, \forall \, \neq \, \bullet  \, \times \, \angle \, \land \, \lor \, \neg \, \overline{AB} \, \triangle \, \square
 \end{equation*}
 
+\centering{\subrayar{Flechas}}
 \begin{equation*}
-	\pm \quad \infty \quad \leq \quad \geq \quad \circ \quad \in \quad \notin \quad \neq \quad \bullet \quad \Leftrightarrow \quad \Updownarrow \quad \times \quad \angle
+\leftarrow \, \rightarrow \, \leftrightarrow \, \Leftarrow \, \Rightarrow \, \Leftrightarrow \, \uparrow \, \downarrow \, \Updownarrow
 \end{equation*}
 
+\centering{\subrayar{Funciones}}
 \begin{equation*}
 	\sin(x) \quad \cos(x) \quad \tan(x) \quad \ln(x) \quad \log(x) \quad \exp(x)
 \end{equation*}
 
+\centering{\subrayar{Entorno \cursiva{align}}}
+%se usa el & para alinear los distintos renglones
 \begin{align*}
 	(a+b)^2 &= (a+b)(a+b)\\
 	&= a^2+ab+ba+b^2\\
 	&=a^2+2ab+b^2
 \end{align*}
+
+\centering{\subrayar{Distintos tipos de letras}}
+\begin{equation*}
+    \mathrm{R}, \mathbb{R}, \mathcal{R}, \mathfrak{R}, \mathbf{R}, \mathsf{R}, \mathit{R}, \mathscr{R}
+\end{equation*}
+
+\centering{\subrayar{\large{Ejemplos}}}
+\begin{equation*}
+\mathscr{F}[x(t)](f)=X(f)=\int_{-\infty}^{\infty} x(t) \supind{e}{-i 2\pi f t}\, dt
+\end{equation*}
+
+\begin{equation*}
+\mathscr{F}[x(n)](f)=X(f)=\sum_{-\infty}^{\infty} x(n) \supind{e}{-i 2\pi f n}
+\end{equation*}
+
+\begin{equation*}
+I = \iint{\overrightarrow{J}\cdot\overrightarrow{ds}}=J\cdot A
+\end{equation*}
+
+\begin{equation*}
+\subind{V}{esfera} = \iiint_{Bola}\,dV = \int_{0}^{2\pi}\int_{0}^{\pi}\int_{0}^{R}{r^2\sin(\phi)}\,dr\,d\phi\,d\theta=\frac{4}{3}\pi R^2
+\end{equation*}
+
+\begin{equation*}
+f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
+\end{equation*}
+
+\begin{equation*}
+	sgn(x) = \begin{cases}
+	-1 & \text{si } x<0,\\
+	0 & \text{si } x=0,\\
+        1 & \text{si } x>0
+	\end{cases}
+\end{equation*}
+
+\begin{equation*}
+	\frac{d^2}{dt^2}i(t)+\frac{R}{L}\frac{d}{dt}i(t)+\frac{1}{LC}i(t)=0
+\end{equation*}
+
+\begin{equation*}
+    \mathbf{X} = 
+            \begin{pmatrix}
+                1&2\\
+                3&4\\
+                5&6
+            \end{pmatrix}\in \supind{\mathbb{R}}{3\times 2}
+\end{equation*}
