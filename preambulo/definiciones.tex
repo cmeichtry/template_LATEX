@@ -1,11 +1,14 @@
 % definiciones.tex
 % Copyright (C) 2023 Cristian Meichtry
 % https://github.com/cmeichtry/template_LATEX
-\def \universidad{Instituto Tecnológico de Buenos Aires}
+
+%--------------------Datos para automatizar--------------------%
+\def \universidad{FACULTAD}
 \def \unidad{NUMERO DE TP}
-\def \carrera{Departamento de Ingeniería Electrónica}
+\def \carrera{CARRERA O DEPARTAMENTO}
 \def \materia{MATERIA}
 \def \titulo{TITULO}
+\def \logofac{imagenes/logo.png} %cambiar el nombre del archivo segun la imagen que corresponda
 
 \def \grupo{NUMERO DE GRUPO}
 
@@ -17,11 +20,12 @@
     Integrante 3\\
     Integrante 4\\
     Integrante 5\\
-}
+} %nombres de los alumnos (Se agrega numero de grupo de forma automática)
+
 \def \profesores{
     Ing. Profesor 1\\
     Ing. Profesor 2\\
-}
+} %nombres de los profesores
 
 \def \Colaboradores{ %nombres de los ayudantes
     
@@ -29,12 +33,13 @@
 
 \def \fecha{
     \noindent
-    Fecha de entrega: \today
+    Fecha de entrega: \today  %pone la fecha de hoy (CHEQUEAR porque pone un dia o el otro según la hora de compilación)
     
     \noindent
     Fecha de corrección:
 }
 
+%--------------------Funciones para formato y numeración--------------------%
 \def \seteocontadores{
 \setcounter{equation}{0} %empezar numeración desde 1 para ecuaciones
 \setcounter{figure}{0} %empezar numeración desde 1 para figuras
