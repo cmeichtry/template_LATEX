@@ -2,57 +2,74 @@
 % Copyright (C) 2023 Cristian Meichtry
 % https://github.com/cmeichtry/template_LATEX
 
-Rincón de Autoayuda: En este archivo hay información básica sobre algunos elementos de \LaTeX\, que puede ser de ayuda para insertar elementos y/o para escribir en modo matemático. En caso de necesitar más herramientas pueden ser utiles sitios como \url{manualdelatex.com}, \url{https://www.overleaf.com/learn} o \url{google.com}
+\cursiva{\negrita{\subrayar{Rincón de Autoayuda:}} En este archivo hay información básica sobre algunos elementos de \LaTeX\, que puede ser de ayuda para insertar elementos y/o para escribir en modo matemático. En caso de necesitar más herramientas pueden ser útiles sitios como \url{manualdelatex.com}, \url{https://www.overleaf.com/learn} o \url{google.com}}\\
 
-%%%% REFERENCIAS %%%%
-%Citar con \autoref{fig:test} las figuras, \autoref{tab:test} las tablas, \eqref{eq:test} las ecuaciones
 
-%%%% IMAGENES %%%%
-%\begin{figure}[H]
-%  \centering
-%   \includegraphics[height = 8cm]{imagenes/seccionN/help.jpg}
-%   \caption{%TITULO DE LA IMAGEN}
-%    \label{fig:test}
-%\end{figure}
+\negrita{\subrayar{REFERENCIAS:}} Referenciar con \autoref{fig:test} las figuras, \autoref{tab:test} las tablas y con \eqref{eq:test} las ecuaciones
 
-%TABLA
-%\begin{table}[htbp]
-%  \centering
-%  \resizebox{10cm}{!}{
-%    \begin{tabular}{|c|c|c|c|c|c|c|}
-%    \hline
-%    a  & a & a & a & a & a\\
-%    \hline
-%    a  & a & a & a & a & a\\
-%    \hline
-%    a  & a & a & a & a & a\\
-%    \hline
-%    \end{tabular}
-%    }
-%    \caption{Corriente de Bias y tensión de offset de LF356 y TL081.}
-%  \label{tab:test}
-%\end{table}
-%
+\negrita{\subrayar{IMÁGENES}}
+\begin{figure}[H]
+  \centering
+   \includegraphics[height = 5cm]{imagenes/logo.png}
+   \caption{Ejemplo}
+   \label{fig:test}
+\end{figure}
 
-%ECUACIONES
-%\begin{equation}
-%    2 + 2 = 5
-%     \label{eq:test}
-%\end{equation}
+\negrita{\subrayar{TABLAS}}
+\begin{table}[H]
+  \centering
+  \resizebox{7cm}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    a  & a & a & a & a & a\\
+    \hline
+    a  & a & a & a & a & a\\
+    \hline
+    a  & a & a & a & a & a\\
+    \hline
+    \end{tabular}
+    }
+    \caption{Ejemplo}
+  \label{tab:test}
+\end{table}
 
-%ECUACIONES DE REFERENCIA
+\negrita{\subrayar{FRAGMENTO DE CÓDIGO}}
+\begin{lstlisting}[language=Python,caption={Ejemplo}]
+Hola mundo
+test = 0
+if test:
+	print("Se paso el test")
+else:
+	print("Hubo una falla")
+ 
+lista = [[56, 34, 1],
+         [12, 4, 5],
+         [9, 4, 3]]
+for i in lista:
+    for j in i:
+        print(j)
+\end{lstlisting}
+
+\negrita{\subrayar{ECUACIONES}}
+\begin{equation}
+    2 + 2 = 5
+     \label{eq:test}
+\end{equation}
+
+\negrita{\subrayar{ECUACIONES DE REFERENCIA}}
+\begin{center}
 %https://manualdelatex.com/simbolos
-\centering{\subrayar{Producto}}
+\subrayar{Producto}
 \begin{equation*}
 	a\cdot b
 \end{equation*}
 
-\centering{\subrayar{División}}
+\subrayar{División}
 \begin{equation*}
 	\frac{a}{b}
 \end{equation*}
 
-\centering{\subrayar{Integral}}
+\subrayar{Integral}
 \begin{align*}
 	&\int f(x)\,dx\\
         &\iint f(x,y)\,dx\,dy\\
@@ -62,35 +79,35 @@ Rincón de Autoayuda: En este archivo hay información básica sobre algunos ele
         &\int_{a}^{b}\int_{c}^{d}f(x,y)\,dx\,dy
 \end{align*}
 
-\centering{\subrayar{Sumatoria}}
+\subrayar{Sumatoria}
 \begin{equation*}
 	\sum_{i=1}^n f(x_i) \Delta x
 \end{equation*}
 
-\centering{\subrayar{Productoria}}
+\subrayar{Productoria}
 \begin{equation*}
 	\prod_{i=1}^n f(x_i) \Delta x
 \end{equation*}
 
-\centering{\subrayar{Límites}}
+\subrayar{Límites}
 \begin{align*}
 	&\lim_{x \to 0} \frac{1}{x} = \,\infty \\ 
         &\frac{1}{x}\stackrel[] {x \to 0}{\longrightarrow}\,\infty
 \end{align*}
 
-\centering{\subrayar{Módulo}}
+\subrayar{Módulo}
 \begin{equation*}
 	\lvert -5 \rvert=5
 \end{equation*}
 
-\centering{\subrayar{Raíces}}
+\subrayar{Raíces}
 \begin{align*}
 	&\sqrt{x+1}\\
         &\sqrt[3]{x+1}\\
         &\sqrt[4]{x+1}
 \end{align*}
 
-\centering{\subrayar{Matrices y vectores}}
+\subrayar{Matrices y vectores}
 \begin{align*}\centering
         &    A_{m,n} = 
             \begin{pmatrix}
@@ -107,7 +124,7 @@ Rincón de Autoayuda: En este archivo hay información básica sobre algunos ele
         &\overrightarrow{AB}
 \end{align*}
 
-\centering{\subrayar{Sistemas}}
+\subrayar{Sistemas}
 \begin{equation*}
 	f(x) = \begin{cases}
 	x^2 & \text{si } x>2,\\
@@ -115,22 +132,22 @@ Rincón de Autoayuda: En este archivo hay información básica sobre algunos ele
 	\end{cases}
 \end{equation*}
 
-\centering{\subrayar{Simbolos}}
+\subrayar{Simbolos}
 \begin{equation*}
 \pm \, \infty \, \leq \, \geq \, \circ \, \in \, \notin \, \subset \, \subseteq \, \cap \, \cup \, A^\complement \, \exists \, \forall \, \neq \, \bullet  \, \times \, \angle \, \land \, \lor \, \neg \, \overline{AB} \, \triangle \, \square
 \end{equation*}
 
-\centering{\subrayar{Flechas}}
+\subrayar{Flechas}
 \begin{equation*}
 \leftarrow \, \rightarrow \, \leftrightarrow \, \Leftarrow \, \Rightarrow \, \Leftrightarrow \, \uparrow \, \downarrow \, \Updownarrow
 \end{equation*}
 
-\centering{\subrayar{Funciones}}
+\subrayar{Funciones}
 \begin{equation*}
 	\sin(x) \quad \cos(x) \quad \tan(x) \quad \ln(x) \quad \log(x) \quad \exp(x)
 \end{equation*}
 
-\centering{\subrayar{Entorno \cursiva{align}}}
+\subrayar{Entorno \cursiva{align}}
 %se usa el & para alinear los distintos renglones
 \begin{align*}
 	(a+b)^2 &= (a+b)(a+b)\\
@@ -138,12 +155,12 @@ Rincón de Autoayuda: En este archivo hay información básica sobre algunos ele
 	&=a^2+2ab+b^2
 \end{align*}
 
-\centering{\subrayar{Distintos tipos de letras}}
+\subrayar{Distintos tipos de letras}
 \begin{equation*}
     \mathrm{R}, \mathbb{R}, \mathcal{R}, \mathfrak{R}, \mathbf{R}, \mathsf{R}, \mathit{R}, \mathscr{R}
 \end{equation*}
 
-\centering{\subrayar{\large{Ejemplos}}}
+\subrayar{\large{Ejemplos}}
 \begin{equation*}
 \mathscr{F}[x(t)](f)=X(f)=\int_{-\infty}^{\infty} x(t) \supind{e}{-i 2\pi f t}\, dt
 \end{equation*}
@@ -184,3 +201,26 @@ f'(x)=\lim_{\Delta x \to 0} \frac{f(x+\Delta x)-f(x)}{\Delta x}
                 5&6
             \end{pmatrix}\in \supind{\mathbb{R}}{3\times 2}
 \end{equation*}
+\end{center}
+
+\negrita{\subrayar{FÓRMULAS QUÍMICAS}}
+\begin{center}
+\chemfig{A-B}\\
+\chemfig{A=B}\\
+\chemfig{A~B}\\
+\chemfig{A>B}\\
+\chemfig{A<B}\\
+\chemfig{A>:B}\\
+\chemfig{A<:B}\\
+\chemfig{A>|B}\\
+\chemfig{A<|B}\\
+
+\chemfig{(-[:0,1.5,,,draw=none]\scriptstyle\color{red}0) (-[1]1)(-[:45,1.5,,,draw=none]\scriptstyle\color{red}45) (-[2]2)(-[:90,1.5,,,draw=none]\scriptstyle\color{red}90) (-[3]3)(-[:135,1.5,,,draw=none]\scriptstyle\color{red}135) (-[4]4)(-[:180,1.5,,,draw=none]\scriptstyle\color{red}180) (-[5]5)(-[:225,1.5,,,draw=none]\scriptstyle\color{red}225) (-[6]6)(-[:270,1.5,,,draw=none]\scriptstyle\color{red}270) (-[7]7)(-[:315,1.5,,,draw=none]\scriptstyle\color{red}315) -0}
+
+\chemfig{A*6(-B-C-D-E-F-)}
+
+2-etil-5-propilnon-1,5-dien-3-ino
+
+\chemfig{C=C(-[6]C(-[6]C))-C~C-C(=[6]C(-[6]C(-C-C)))-C-C-C}
+
+\end{center}
