@@ -1,56 +1,74 @@
 % Modelo de caratula 1
-% Copyright (C) 2023 Cristian Meichtry - Alejandro Heir
+% Copyright (C) 2023 Cristian Meichtry
 % https://github.com/cmeichtry/template_LATEX
+
+%Esta carátula está parametrizada, es decir cada campo se rellena de forma automática. En el archivo definiciones.tex se puede modificar la información (Alumnos, número de grupo, profesores,etc).
+
 
 \begin{titlepage}
     \begin{center}
         \includegraphics[width=0.4\linewidth]{\logofac}\\
-
-        \vskip 0.25cm
-        
+         \vspace{-0.5cm}
         \textbf{\huge{\universidad}}
-        
-        \vskip 0.5cm
         
         \Large{\carrera}
         
-        \vskip 0.3cm
-        
+         \vspace{-0.3cm}
         \LARGE{\materia}
         
-        % \vskip 0.2cm
+        \vspace{-0.8cm}
         \rule{10cm}{0.01cm}\\
         \LARGE{\textbf{\unidad}}
         
-        % \vspace{-0.3cm}
+        \vspace{-0.3cm}
         
         \Large{\titulo}
         
      \vspace{-0.3cm}
         \normalsize
         \rule{10cm}{0.01cm}\\
-        \vspace{0.3cm}
-        \autores
-        \vskip 0.5cm
+        \vspace{0.4cm}
+        %\autores
+        \textbf{GRUPO N° \grupo}\\ %numero de grupo
+        \vspace{0.15cm}
+        %%%%%% Integrantes %%%%%%
+        \autorUNO\\
+        \vspace{0.1cm}
+        \autorDOS\\
+        \vspace{0.1cm}
+        \autorTRES\\
+        \vspace{0.1cm}
+        \autorCUATRO\\
+        \vspace{0.1cm}
+        \autorCINCO\\
+        \vspace{0.15cm}
+        %%%%%% Profesores %%%%%%
         \textbf{PROFESORES}\\
-        \profesores
-        %\vspace{0.4cm}
-        %\textbf{AYUDANTES}\\ %descomentar en caso de agregar a los ayudantes
-        %\Colaboradores
+        \vspace{0.15cm}
+        \profesorUNO\\
+        \vspace{0.1cm}
+        \profesorDOS\\
+        %\vspace{0.3cm}
+        \vspace{0.15cm}
+        %%%%%% Ayudantes %%%%%%
+        %descomentar en caso de agregar a los ayudantes
+        %\textbf{AYUDANTES}\\ 
+        %\vspace{0.15cm}
+        %\ayudanteUNO\\
+        %\vspace{0.1cm}
+        %\ayudanteDOS\\
         \rule{10cm}{0.01cm}\\
         
         
 \end{center}
-
-    \vskip 1cm
     \noindent
-    \hspace{30pt}Fecha de entrega:  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NOTA:
+    \hspace{30pt}Fecha de entrega: \fecha ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ NOTA:
     
     \noindent
     \hspace{30pt}Fecha de corrección:
     
     \noindent
     \hspace{30pt}Observaciones: 
-
         
+    
 \end{titlepage}
