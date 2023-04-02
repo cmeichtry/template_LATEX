@@ -2,6 +2,8 @@
 % Copyright (C) 2023 Cristian Meichtry
 % https://github.com/cmeichtry/template_LATEX
 
+%Esta carátula está parametrizada, es decir cada campo se rellena de forma automática. En el archivo definiciones.tex se puede modificar la información (Alumnos, número de grupo, profesores,etc).
+
 \begin{titlepage}
     \begin{center}
         \unidad
@@ -12,9 +14,21 @@
         \end{center}
         \vspace{0.7cm}
         \normalsize    
-        \autores
+        %\autores
+        \textbf{GRUPO N° \grupo}\\
+        \vspace{0.1cm}\\
+        \noindent
+        \autorUNO\\
+        \autorDOS\\
+        \autorTRES\\
+        \autorCUATRO\\
+        \autorCINCO\\
         \vspace{0.3cm}\\
-        \fecha
+        \noindent
+            Fecha de entrega: \fecha 
+            
+        \noindent
+            Fecha de corrección:
         \indent
         \bigskip
         
@@ -39,5 +53,4 @@
         %\lugar\\
         %\fecha
         
-    
 \end{titlepage}
