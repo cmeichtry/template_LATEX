@@ -15,6 +15,58 @@
    \label{fig:test}
 \end{figure}
 
+\begin{figure}[H] %si se quiere una figura al lado de otra la suma de los anchos de cada imagen no debe ser mayor a textwidth, de lo contrario quedan una abajo de la otra
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{imagenes/logo.png}
+        \caption{}
+        \label{subfig:s2:cuant_nz}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{imagenes/logoITBA.png}
+        \caption{}
+        \label{subfig:test}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.3\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{imagenes/logoITBA.png}
+        \caption{}
+        \label{subfig:test1}
+    \end{subfigure}
+        \caption{Ejemplo de subfiguras}
+        \label{fig:test1}
+\end{figure}
+
+\begin{figure}[H] %si se quiere una figura al lado de otra la suma de los anchos de cada imagen no debe ser mayor a textwidth, de lo contrario quedan una abajo de la otra
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{imagenes/logo.png}
+        \caption{}
+        \label{subfig:s2:cuant_nz}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.49\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{imagenes/logoITBA.png}
+        \caption{}
+        \label{subfig:s2:cuant_z}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{\textwidth}
+        \centering
+        \includegraphics[width = \textwidth]{imagenes/logoITBA.png}
+        \caption{}
+        \label{subfig:s2:cuant_z}
+    \end{subfigure}
+        \caption{Ejemplo de subfiguras}
+        \label{fig:test2}
+\end{figure}
+
 \negrita{\subrayar{TABLAS}}
 \begin{table}[H]
   \centering
