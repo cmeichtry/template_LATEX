@@ -26,10 +26,11 @@
 \usepackage{booktabs} %modificación de las lineas en las tablas
 \usepackage{parskip} %modificación de sangría
 \usepackage[center]{caption} %permite modificar el formato de los caption para tablas/figuras
+\usepackage{subcaption} % manejo de subfigure
 \usepackage{array} %permite escribir en columnas sin ser una tabla, por ejemplo, matrices
 \usepackage{multirow} %filas múltiples en tablas
 \usepackage{stackrel} %Permite escribir cosas arriba o abajo de otras, \stackrel[lo de abajo] {lo de arriba}{lo del medio}
-\usepackage{subfigure} %Permite poner subfiguras
+%\usepackage{subfigure} %Permite poner subfiguras OBSOLETO
 \usepackage{cancel} %permite tachar terminos en ecuaciones
 \usepackage{comment} %para comentar grandes partes de codigo, usar \begin{comment}
 \usepackage{setspace} %permite cambiar espacio entre lineas
@@ -56,7 +57,11 @@
 \renewcommand{\labelenumiii}{\arabic{section}.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
 \renewcommand{\labelenumiv}{\arabic{section}.\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
 
-\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}  %definición enumeración de ecuaciones.
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}  %definición enumeración de figuras.
+
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
+\renewcommand{\thesubfigure}{(\alph{subfigure})} %modificación enumeración de subfiguras.
+
 \renewcommand{\thetable}{\arabic{section}.\arabic{table}} %definición enumeración de tablas.
 
 \setcounter{tocdepth}{2} %hasta que nivel aparece en el índice
