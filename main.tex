@@ -1,0 +1,107 @@
+% informe.tex
+% Copyright (C) 2023 Cristian Meichtry
+% https://github.com/cmeichtry/template_LATEX
+\documentclass[11pt]{article}
+\input{preambulo/preamble}
+\input{preambulo/definiciones}
+\setlength{\parindent}{12pt} %sangria
+\linespread{1} % Interlineado
+
+%---------------- ENCABEZADO Y PIE DE PAGINA ----------------%
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\begin{picture}(0,0) \put(-51,-7){\includegraphics[width=20mm]{\logofac}} \end{picture}}
+\lhead{\materia}
+\lfoot{\leftmark}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+%---------------- INICIO DEL DOCUMENTO ----------------%
+\begin{document}
+%---------------- CARATULA ----------------%
+\input{caratulas/caratula1} %elegir modelo de caratula
+\newpage
+%---------------- INDICE ----------------%
+\newpage
+\pagestyle{empty}
+\renewcommand{\contentsname}{{\textit{\huge Índice}}} %Se puede poner lo que sea en vez de índice
+\tableofcontents
+
+\newpage
+\pagestyle{empty}
+\renewcommand{\listfigurename}{{\textit{\huge Lista de figuras}}}
+\listoffigures
+
+%---------------- DESARROLLO ----------------%
+\newpage
+\pagestyle{fancy} %activa encabezado y pie de pagina
+\setcounter{page}{1} %empezar numeración desde está pagina
+\seteocontadores
+\section{Sección 1}
+\label{sec:seccion1}
+\subfile{secciones/seccion1}
+
+\newpage
+\seteocontadores
+\section{Sección 2}
+\label{sec:seccion2}
+\subfile{secciones/seccion2}
+
+\newpage
+\seteocontadores
+\section{Sección 3}
+\label{sec:seccion3}
+\subfile{secciones/seccion3}
+
+\newpage
+\seteocontadores
+\section{Sección 4}
+\label{sec:seccion4}
+\subfile{secciones/seccion4}
+
+\newpage
+\seteocontadores
+\section{Sección 5}
+\label{sec:seccion5}
+\subfile{secciones/seccion5}
+
+\newpage
+\seteocontadores
+\section{Sección 6}
+\label{sec:seccion6}
+\subfile{secciones/seccion6}
+
+%%%%%%% APENDICES %%%%%%%%
+
+\appendix %define el formato apendice
+\clearpage
+\newpage
+\pagenumbering{Roman} %cambia numeracion
+\def \nombreapendice{A} %letra del apendice para tablas y figuras
+\formatoapendice %define el formato para numeracion de cosas
+\seteocontadores %inicializa los contadores
+\section{Nombre Apéndice A}\label{ApendiceA} %nombre del apendice, mas label para referenciarlo (se puede con \autoref{})
+\subfile{secciones/apendiceA}
+
+\clearpage
+\newpage
+\pagenumbering{Roman}
+\def \nombreapendice{B}
+\formatoapendice
+\seteocontadores
+\section{Nombre Apéndice B}\label{Apendice B}
+\subfile{secciones/apendiceB}
+
+%---------------- BIBLIOGRAFIA ----------------%
+\clearpage
+\newpage
+\pagenumbering{Roman}
+\seteocontadores
+\rfoot{ }
+\input{secciones/bibliografia.bib} %agrega la bibliografía
+
+%agrega la sección bibliografía en el indice
+
+%---------------- FIN DEL DOCUMENTO ----------------%
+\end{document} 
