@@ -1,0 +1,16 @@
+\cursiva{\negrita{\subrayar{\LARGE{Uso de subfiles}}}}
+
+El uso de subfiles permite compilar cada sección por separado para evitar demoras excesivas si se tiene un archivo extenso.
+Si se compila desde dentro de una sección, solo será procesada esa parte del archivo. Para unificar todo y obtener el PDF completo la compilación debe ser realizada desde main.tex
+
+En caso de querer sacar esta opción los pasos a seguir son:
+\begin{enumerate}
+    \item Entrar a cada seeción y eliminar las lineas:
+        \begin{itemize}
+            \item documentclass[../main.tex]{subfiles}
+            \item begin{document}
+            \item end{document}
+        \end{itemize}
+    \item Ir a \comilladoble{main.tex} y cambiar todos los \comilladoble{subfiles} por \comilladoble{input}
+\end{enumerate}
+
