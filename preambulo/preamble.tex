@@ -1,5 +1,5 @@
 % preamble.tex
-% Copyright (C) 2023 Cristian Meichtry
+% Copyright (C) 2024 Cristian Meichtry
 % https://github.com/cmeichtry/template_LATEX
 
 %--------------------BLOQUE DE FORMATO--------------------%
@@ -46,6 +46,7 @@
 \usepackage{microtype} %subliminal refinements towards typographical perfection
 \usepackage{chemfig} %permite realizar representaciones en 2D de estructuras químicas
 \usepackage{tikz} %permite realizar gráficos
+
 %--------------------Titulos y enumeración de secciones--------------------%
 %titulos de secciones y subsecciones.
 \titleformat{\section}[hang]{\normalfont\bfseries}{\thesection}{5pt.}{} %modificación secciones.
@@ -103,3 +104,37 @@
 \makeatletter
 \pdfstringdefDisableCommands{\let\HyPsd@CatcodeWarning\@gobble}
 \makeatother
+
+%--------------------Funciones para formato y numeración--------------------%
+\def \seteocontadores{
+\setcounter{equation}{0} %empezar numeración desde 1 para ecuaciones
+\setcounter{figure}{0} %empezar numeración desde 1 para figuras
+\setcounter{table}{0} %empezar numeración desde 1 para tablas
+}
+
+\def \formatoapendice{
+\renewcommand{\thetable}{\nombreapendice{}.\arabic{table}}
+\renewcommand{\thefigure}{\nombreapendice{}.\arabic{figure}}
+\rfoot{\nombreapendice{}.\thepage}
+}
+
+%--------------------Funciones para usar en mathmode--------------------%
+\newcommand{\derpar}[2]{\frac{\partial #1}{\partial #2}} %derivada parcial
+\newcommand{\der}[2]{\frac{d #1}{d #2}} %derivada "normal"
+\newcommand{\paren}[1]{\left( #1 \right)} %Parentesis
+\newcommand{\corch}[1]{\left[ #1 \right]} %corchetes
+\newcommand{\llave}[1]{\left \{ #1 \right \}} %llaves
+\newcommand{\abs}[1]{\lvert#1\rvert} %módulo
+\newcommand{\supind}[2]{#1^{#2}} %supraindice
+\newcommand{\subind}[2]{#1_{#2}} %supraindice
+\newcommand{\ohm}{\Omega} %Escribe el simbolo Ω
+\newcommand{\degree}{^\circ}  %Escribe el simbolo °
+\newcommand{\grados}{^\circ}  %Escribe el simbolo °
+\newcommand{\entonces}{\Rightarrow} %Escribe el simbolo ->
+\newcommand{\sii}{\Leftrightarrow} %Escribe el simbolo <->
+%--------------------Funciones para formato de texto--------------------%
+\newcommand{\cursiva}[1]{\textit{#1}}
+\newcommand{\negrita}[1]{\textbf{#1}}
+\newcommand{\subrayar}[1]{\underline{#1}}
+\newcommand{\comilladoble}[1]{``#1''} %Agrega comillas dobles
+\newcommand{\comillasimple}[1]{`#1'} %Agrega comillas simples
