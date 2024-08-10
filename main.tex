@@ -1,33 +1,47 @@
 % informe.tex
-% Copyright (C) 2023 Cristian Meichtry
+% Copyright (C) 2024 Cristian Meichtry
 % https://github.com/cmeichtry/template_LATEX
+
 \documentclass[11pt]{article}
 \input{preambulo/preamble}
-\input{preambulo/definiciones}
+
 \setlength{\parindent}{12pt} %sangria
 \linespread{1} % Interlineado
 
 %---------------- ENCABEZADO Y PIE DE PAGINA ----------------%
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{\begin{picture}(0,0) \put(-51,-7){\includegraphics[width=20mm]{\logofac}} \end{picture}}
-\lhead{\materia}
-\lfoot{\leftmark}
-\rfoot{\thepage}
-\renewcommand{\headrulewidth}{1pt}
-\renewcommand{\footrulewidth}{1pt}
+\rhead{\begin{picture}(0,0) \put(-51,-7){\includegraphics[width=20mm]{\logofac}} \end{picture}} %incluye logo en esq sup derecha
+\lhead{\materia} %incluye nombre de materia en esq sup izquierda
+%\lfoot{\leftmark} %incluye nombre de subsección en esq inf izquierda
+\rfoot{\thepage} %incluye número de página en esq inf derecha
+\renewcommand{\headrulewidth}{1pt} %línea para margen superior
+%\renewcommand{\footrulewidth}{1pt} %línea para margen inferior
 
 %---------------- INICIO DEL DOCUMENTO ----------------%
 \begin{document}
+
+%------------------ DATOS GENERALES ------------------%
+\def \universidad{FACULTAD}
+\def \unidad{Trabajo Práctico N$^\circ$X}
+\def \carrera{CARRERA O DEPARTAMENTO}
+\def \materia{MATERIA}
+\def \titulo{TITULO}
+\def \logofac{preambulo/logoITBA.png} %cambiar el nombre del archivo segun la imagen que corresponda
+
+%El número de grupo y el nombre de autores, ayudantes, y docentes se modifican sobre la cáratula en el .tex correspondiente 
+
 %---------------- CARATULA ----------------%
 \input{caratulas/caratula1} %elegir modelo de caratula
 \newpage
+
 %---------------- INDICE ----------------%
 \newpage
 \pagestyle{empty}
 \renewcommand{\contentsname}{{\textit{\huge Índice}}} %Se puede poner lo que sea en vez de índice
 \tableofcontents
 
+%---------------- LISTA DE FÍGURAS ----------------%
 \newpage
 \pagestyle{empty}
 \renewcommand{\listfigurename}{{\textit{\huge Lista de figuras}}}
@@ -73,7 +87,6 @@
 \subfile{secciones/seccion6}
 
 %%%%%%% APENDICES %%%%%%%%
-
 \appendix %define el formato apendice
 \clearpage
 \newpage
@@ -99,6 +112,7 @@
 \pagenumbering{Roman}
 \seteocontadores
 \rfoot{ }
+\lfoot{ }
 \input{secciones/bibliografia.bib} %agrega la bibliografía
 
 %agrega la sección bibliografía en el indice
